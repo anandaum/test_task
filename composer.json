@@ -1,0 +1,26 @@
+{
+    "name":        "naumov/test_task",
+    "description": "Test task of Naumov Dmitriy with WordPress and Composer",
+    "license":     "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url":  "https://wpackagist.org"
+        }
+    ],
+    "require": {
+        "php": ">=5.5",
+        "johnpbloch/wordpress-core-installer": "~0.2",
+        "johnpbloch/wordpress": "4.5.3",
+        "composer/installers":  "~1.0",
+        "wpackagist-plugin/akismet": "*"
+    },
+    "extra": {
+        "wordpress-install-dir": "src/wordpress",
+        "installer-paths": {
+            "src/wordpress/wp-content/plugins/{$name}":    ["type:wordpress-plugin"],
+            "src/wordpress/wp-content/themes/{$name}":     ["type:wordpress-theme"],
+            "src/wordpress/wp-content/mu-plugins/{$name}": ["type:wordpress-muplugin"]
+        }
+    }
+}
